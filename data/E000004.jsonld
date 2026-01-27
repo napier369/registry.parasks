@@ -5,16 +5,31 @@
     "Entity",
     "Identifier"
   ],
-  "prefLabel": {
-    "en": "International Business Machines Corporation"
+  "contentHash": "sha256:REPLACED_AT_RUNTIME",
+  "dcterms:conformsTo": {
+    "@id": "https://registry.parasks/ontology/v1"
   },
-  "notation": "E000004",
+  "issuedAt": "2026-01-27T00:00:00Z",
   "issuedBy": {
     "@id": "https://registry.parasks/id/A000001"
   },
-  "issuedAt": "2026-01-27T00:00:00Z",
+  "notation": "E000004",
+  "prefLabel": {
+    "en": "International Business Machines Corporation"
+  },
   "recordState": {
     "@id": "https://registry.parasks/def/recordState#Published"
+  },
+  "source": {
+    "wikipedia": {
+      "name": "Wikipedia",
+      "pageTitle": "IBM",
+      "pageUrl": "https://en.wikipedia.org/wiki/IBM",
+      "raw": {
+        "@id": "https://napier369.github.io/registry.parasks/sources/raw/wikipedia/ibm/query.json"
+      },
+      "retrievedAt": "2026-01-27T00:00:00Z"
+    }
   },
   "tags": [
     "ibm",
@@ -23,20 +38,5 @@
     "machines",
     "corporation",
     "technology"
-  ],
-  "source": {
-    "wikipedia": {
-      "name": "Wikipedia",
-      "pageTitle": "IBM",
-      "pageUrl": "https://en.wikipedia.org/wiki/IBM",
-      "retrievedAt": "2026-01-27T00:00:00Z",
-      "raw": {
-        "@id": "https://napier369.github.io/registry.parasks/sources/raw/wikipedia/ibm/query.json"
-      }
-    }
-  },
-  "dcterms:conformsTo": {
-    "@id": "https://registry.parasks/ontology/v1"
-  },
-  "contentHash": "sha256:2f9a0ba0c15210c98e61b0295db3004bcd0542868cd990029dc7ad840fc5cc5f"
+  ]
 }

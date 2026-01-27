@@ -5,16 +5,31 @@
     "Entity",
     "Identifier"
   ],
-  "prefLabel": {
-    "en": "Albert Einstein"
+  "contentHash": "sha256:REPLACED_AT_RUNTIME",
+  "dcterms:conformsTo": {
+    "@id": "https://registry.parasks/ontology/v1"
   },
-  "notation": "E000003",
+  "issuedAt": "2026-01-27T00:00:00Z",
   "issuedBy": {
     "@id": "https://registry.parasks/id/A000001"
   },
-  "issuedAt": "2026-01-27T00:00:00Z",
+  "notation": "E000003",
+  "prefLabel": {
+    "en": "Albert Einstein"
+  },
   "recordState": {
     "@id": "https://registry.parasks/def/recordState#Published"
+  },
+  "source": {
+    "wikipedia": {
+      "name": "Wikipedia",
+      "pageTitle": "Albert Einstein",
+      "pageUrl": "https://en.wikipedia.org/wiki/Albert_Einstein",
+      "raw": {
+        "@id": "https://napier369.github.io/registry.parasks/sources/raw/wikipedia/albert-einstein/query.json"
+      },
+      "retrievedAt": "2026-01-27T00:00:00Z"
+    }
   },
   "tags": [
     "albert",
@@ -22,20 +37,5 @@
     "physics",
     "relativity",
     "scientist"
-  ],
-  "source": {
-    "wikipedia": {
-      "name": "Wikipedia",
-      "pageTitle": "Albert Einstein",
-      "pageUrl": "https://en.wikipedia.org/wiki/Albert_Einstein",
-      "retrievedAt": "2026-01-27T00:00:00Z",
-      "raw": {
-        "@id": "https://napier369.github.io/registry.parasks/sources/raw/wikipedia/albert-einstein/query.json"
-      }
-    }
-  },
-  "dcterms:conformsTo": {
-    "@id": "https://registry.parasks/ontology/v1"
-  },
-  "contentHash": "sha256:b958390488b9835e83b96375c22ec0679e8fa20bfa5f6b29ba38afd24d377fe4"
+  ]
 }
