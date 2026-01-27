@@ -1,0 +1,22 @@
+{
+  "@context": "https://registry.parasks/ontology/v1/context.jsonld",
+  "@id": "https://registry.parasks/id/E000003",
+  "@type": "Entity",
+  "rdfs:label": { "en": "Albert Einstein" },
+  "registry:status": "active",
+  "registry:issuedAt": "2026-01-27T00:00:00Z",
+  "registry:tags": [
+    "albert",
+    "einstein",
+    "physics",
+    "relativity",
+    "scientist"
+  ],
+  "registry:source": {
+    "name": "Wikipedia",
+    "pageTitle": "Albert Einstein",
+    "pageUrl": "https://en.wikipedia.org/wiki/Albert_Einstein",
+    "retrievedAt": "2026-01-27T00:00:00Z",
+    "raw": "https://napier369.github.io/registry.parasks/sources/raw/wikipedia/albert-einstein/query.json"
+  }
+}
