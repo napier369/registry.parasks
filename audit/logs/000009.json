@@ -1,0 +1,9 @@
+{
+  "seq": 9,
+  "ts": "2026-01-27T00:00:00Z",
+  "actor": { "@id": "https://registry.parasks/id/A000001" },
+  "event": "RESEAL_CONTENTHASH_CANONICAL",
+  "targets": ["https://registry.parasks/id/E000004"],
+  "hash": "sha256:599da514465ba45ec8c82afeb173b712384e1fef7c3e72bf9dde021da79cb481",
+  "notes": "Resealed using canonical JSON hashing (sorted keys, stable separators, UTF-8) with contentHash neutralized."
+}
