@@ -1,0 +1,9 @@
+{
+  "seq": 7,
+  "ts": "2026-01-27T00:00:00Z",
+  "actor": { "@id": "https://registry.parasks/id/A000001" },
+  "event": "SEAL_CONTENTHASH",
+  "targets": ["https://registry.parasks/id/E000004"],
+  "hash": "sha256:fd6c85b7dd6d12161249693dcf8bcce1b471326a06421704311641a2fece98b8",
+  "notes": "Content hash generated and sealed for v1-compliant record."
+}
