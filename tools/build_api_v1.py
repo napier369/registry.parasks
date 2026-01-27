@@ -76,7 +76,6 @@ def main():
     write_json("api/v1/manifest.json", {
         "apiVersion": "v1",
         "base": BASE,
-        "generatedAt": now,
         "latestAudit": "/audit/logs/index.json",
         "records": manifest_recs
     })
@@ -87,7 +86,6 @@ def main():
         write_json(f"api/v1/bundle/{rid}.json", {
             "apiVersion": "v1",
             "base": BASE,
-            "generatedAt": now,
             "id": rid,
             "resolver": f"/id/{rid}/",
             "page": f"/page/{rid}/",
