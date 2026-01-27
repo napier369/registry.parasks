@@ -1,0 +1,9 @@
+# registry.parasks GENESIS SNAPSHOT
+# Issued: 2026-01-27
+
+data/E000001.jsonld
+data/A000001.jsonld
+data/X000001.jsonld
+ontology/v1/context.jsonld
+ontology/v1/ontology.jsonld
+manifests/snapshots/genesis.manifest.json
