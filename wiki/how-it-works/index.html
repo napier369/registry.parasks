@@ -1,29 +1,52 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>How it works — registry.parasks</title>
-</head>
-<body>
-  <h1>How it works</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>How it works — registry.parasks Wiki</title></head><body>
 
-  <pre>
+<h1>How it works</h1>
+
+<pre>
 IDENTITY (permanent)
-  /id/E000001
+  /id/E000001/
       |
       | (resolver)
       v
 HUMAN VIEW            MACHINE TRUTH
 /page/E000001/        /data/E000001.jsonld
-  </pre>
+</pre>
 
-  <ul>
-    <li><strong>/id</strong> never changes.</li>
-    <li><strong>/page</strong> can change layout without changing identity.</li>
-    <li><strong>/data</strong> is the authoritative machine form.</li>
-  </ul>
+<ul>
+  <li><strong>/id</strong> never changes.</li>
+  <li><strong>/page</strong> can change layout without changing identity.</li>
+  <li><strong>/data</strong> is the authoritative machine form.</li>
+</ul>
 
-  <p>See: <a href="../../id/E000001/">Authority (E000001)</a></p>
-  <p>Return: <a href="../">Wiki index</a></p>
-</body>
-</html>
+<h2>Publishing surfaces</h2>
+<ul>
+  <li><code>/id/&lt;ID&gt;/</code> → redirects to <code>/page/&lt;ID&gt;/</code></li>
+  <li><code>/page/&lt;ID&gt;/</code> = human-readable page for the ID</li>
+  <li><code>/data/&lt;ID&gt;.jsonld</code> = canonical machine record (JSON-LD)</li>
+  <li><code>/audit/logs/index.json</code> = audit head pointer</li>
+  <li><code>/audit/logs/00000N.json</code> = append-only audit events</li>
+  <li><code>/api/v1/index.json</code> = discovery index of published records</li>
+  <li><code>/wiki/</code> = narrative documentation (non-authoritative)</li>
+</ul>
+
+<h2>Fetch flow (example)</h2>
+<ul>
+  <li>Start: <a href="../../id/E000004/">/id/E000004/</a></li>
+  <li>Machine: <a href="../../data/E000004.jsonld">/data/E000004.jsonld</a></li>
+  <li>Audit head: <a href="../../audit/logs/index.json">/audit/logs/index.json</a></li>
+  <li>Discovery: <a href="../../api/v1/index.json">/api/v1/index.json</a></li>
+</ul>
+
+<h2>Issuance rule</h2>
+<ul>
+  <li>Issuing a new ID adds: <code>/data</code>, <code>/page</code>, <code>/id</code>, and an audit entry.</li>
+  <li>Identifiers are never deleted or reused.</li>
+  <li>Wiki edits must not change identifier meaning.</li>
+</ul>
+
+<p>See: <a href="../../id/E000001/">Authority (E000001)</a></p>
+<p>See also: <a href="../audit/">Audit &amp; Verification</a> • <a href="../identifiers/">Identifiers</a></p>
+<p>Return: <a href="../">Wiki index</a></p>
+
+</body></html>
