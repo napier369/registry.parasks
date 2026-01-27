@@ -1,0 +1,7 @@
+{
+  "registry": "registry.parasks",
+  "purpose": "Signature verification keys for manifests and records",
+  "keys": [],
+  "status": "v1 placeholder",
+  "note": "No signing keys published yet; registry is unsigned at v1 genesis."
+}
