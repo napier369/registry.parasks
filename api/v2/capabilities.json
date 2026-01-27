@@ -1,0 +1,13 @@
+{
+  "apiVersion": "v2",
+  "base": "https://napier369.github.io/registry.parasks",
+  "status": "scaffold",
+  "endpoints": {
+    "apiIndex": "/api/v2/index.json",
+    "capabilities": "/api/v2/capabilities.json"
+  },
+  "notes": [
+    "No v2 endpoints are live yet.",
+    "All production consumers should use /api/v1/*."
+  ]
+}

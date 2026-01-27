@@ -1,0 +1,10 @@
+{
+  "apiVersion": "v2",
+  "base": "https://napier369.github.io/registry.parasks",
+  "status": "scaffold",
+  "capabilities": "/api/v2/capabilities.json",
+  "notes": [
+    "v2 is a placeholder only.",
+    "v1 remains frozen and authoritative for all existing IDs."
+  ]
+}
