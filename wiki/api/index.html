@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Public API — registry.parasks</title>
+</head>
+<body>
+  <h1>Public API</h1>
+
+  <p>
+    The registry is published as static, read-only resources. There is no write API.
+    Publication occurs by issuing new records and audit entries.
+  </p>
+
+  <h2>Endpoints</h2>
+  <ul>
+    <li><code>/id/&lt;ID&gt;/</code> — identifier entrypoint (resolves to a human page)</li>
+    <li><code>/page/&lt;ID&gt;/</code> — human-readable page</li>
+    <li><code>/data/&lt;ID&gt;.jsonld</code> — machine-readable JSON-LD record</li>
+    <li><code>/audit/logs/index.json</code> — pointer to latest audit entry</li>
+    <li><code>/audit/logs/00000N.json</code> — audit entries</li>
+    <li><code>/.well-known/registry-keys.json</code> — verification keys (present/future)</li>
+  </ul>
+
+  <h2>Usage</h2>
+  <ul>
+    <li>Humans: browse <code>/id</code> or <code>/page</code></li>
+    <li>Machines: fetch <code>/data</code> JSON-LD</li>
+    <li>Monitoring: poll <code>/audit/logs/index.json</code> for changes</li>
+  </ul>
+
+  <h2>Status codes</h2>
+  <ul>
+    <li>200 — resource exists</li>
+    <li>404 — resource not present</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
