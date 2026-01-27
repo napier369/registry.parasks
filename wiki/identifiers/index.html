@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Identifiers — registry.parasks</title>
+</head>
+<body>
+  <h1>Identifiers</h1>
+
+  <p>
+    Identifiers in <strong>registry.parasks</strong> are permanent, opaque, and issued
+    by authority. Meaning is carried in records, not encoded in the identifier string.
+  </p>
+
+  <h2>Form</h2>
+  <ul>
+    <li>Pattern: <code>/id/&lt;PREFIX&gt;&lt;NUMBER&gt;</code></li>
+    <li>Examples: <code>E000001</code>, <code>A000001</code>, <code>D000001</code>, <code>X000002</code></li>
+  </ul>
+
+  <h2>Prefixes</h2>
+  <ul>
+    <li><strong>E</strong> — Entity</li>
+    <li><strong>A</strong> — Agent</li>
+    <li><strong>D</strong> — Document</li>
+    <li><strong>X</strong> — Event</li>
+  </ul>
+
+  <h2>Rules</h2>
+  <ul>
+    <li>Identifiers are issued, never derived.</li>
+    <li>Identifiers are never reused or deleted.</li>
+    <li>Changes create new records and audit entries.</li>
+  </ul>
+
+  <h2>Resolution</h2>
+  <ul>
+    <li><code>/id</code> resolves to <code>/page</code> for humans.</li>
+    <li>Machine-readable form is available under <code>/data</code>.</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
