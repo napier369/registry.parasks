@@ -1,0 +1,16 @@
+{
+  "apiVersion": "v1",
+  "base": "https://napier369.github.io/registry.parasks",
+  "http": {
+    "idResolver": {
+      "path": "/id/{ID}/",
+      "behavior": "303 See Other",
+      "targets": ["/page/{ID}/", "/data/{ID}.jsonld"]
+    },
+    "notFound": "404 Not Found (unknown ID or missing resource)",
+    "gone": "410 Gone (reserved for future use; not used in v1)",
+    "notAcceptable": "406 Not Acceptable (reserved for future RDF negotiation; v1 serves JSON-LD only)",
+    "rateLimit": "429 Too Many Requests (not used in v1 on GitHub Pages)",
+    "maintenance": "503 Service Unavailable (not used in v1 on GitHub Pages)"
+  }
+}
