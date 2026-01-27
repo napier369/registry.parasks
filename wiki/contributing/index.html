@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Contributing — registry.parasks</title>
+</head>
+<body>
+  <h1>Contributing</h1>
+
+  <p>
+    Contributions are additive only. Do not rename, delete, or reuse identifiers.
+    New records are issued by publishing a complete record pack and an audit entry.
+  </p>
+
+  <h2>Record pack (required)</h2>
+  <ul>
+    <li><code>data/&lt;ID&gt;.jsonld</code> — authoritative machine record</li>
+    <li><code>page/&lt;ID&gt;/index.html</code> — human-readable view</li>
+    <li><code>id/&lt;ID&gt;/index.html</code> — identifier resolver stub</li>
+    <li><code>audit/logs/&lt;SEQ&gt;.json</code> — append-only audit entry</li>
+  </ul>
+
+  <h2>Rules</h2>
+  <ul>
+    <li>IDs are opaque and sequential (no meaning encoded).</li>
+    <li>Every new ID must be added to an audit entry.</li>
+    <li>Update <code>audit/logs/index.json</code> to point to the latest audit entry.</li>
+    <li>Update <code>wiki/index.html</code> to link new documentation pages (optional).</li>
+  </ul>
+
+  <h2>Minimum JSON-LD fields</h2>
+  <ul>
+    <li><code>@context</code></li>
+    <li><code>@id</code></li>
+    <li><code>@type</code></li>
+    <li><code>rdfs:label</code></li>
+    <li><code>registry:issuedAt</code></li>
+    <li><code>registry:status</code></li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
