@@ -1,0 +1,25 @@
+{
+  "@context": {
+    "id": "@id",
+    "type": "@type",
+
+    "Entity": "https://registry.parasks/ontology/v1/Entity",
+    "Document": "https://registry.parasks/ontology/v1/Document",
+    "Event": "https://registry.parasks/ontology/v1/Event",
+    "Agent": "https://registry.parasks/ontology/v1/Agent",
+    "Relationship": "https://registry.parasks/ontology/v1/Relationship",
+    "Identifier": "https://registry.parasks/ontology/v1/Identifier",
+    "Provenance": "https://registry.parasks/ontology/v1/Provenance",
+
+    "registry": "https://registry.parasks/ontology/v1/",
+    "prov": "http://www.w3.org/ns/prov#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+
+    "rdfs:label": {
+      "@container": "@language"
+    },
+    "rdfs:comment": {
+      "@container": "@language"
+    }
+  }
+}
