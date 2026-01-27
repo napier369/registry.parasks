@@ -1,0 +1,8 @@
+{
+  "seq": 2,
+  "ts": "2026-01-27T00:00:00Z",
+  "actor": "https://registry.parasks/id/A000001",
+  "event": "ISSUE_DOCUMENT",
+  "adds": ["https://registry.parasks/id/D000001"],
+  "notes": "Issued first Document record pack."
+}
