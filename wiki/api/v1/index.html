@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>API v1 — Stability Contract</title>
+</head>
+<body>
+  <h1>API v1 — Stability Contract</h1>
+
+  <p>
+    API v1 is <strong>frozen</strong>. It will never change in meaning, hash rules, or endpoint semantics.
+    New capabilities happen in <strong>v2+</strong> only.
+  </p>
+
+  <h2>Frozen guarantees</h2>
+  <ul>
+    <li><strong>Identifier invariance:</strong> <code>/id/{ID}/</code> remains permanent.</li>
+    <li><strong>Resolver contract:</strong> <code>/id/{ID}/</code> keeps resolving to <code>/page</code> and <code>/data</code>.</li>
+    <li><strong>Canonical hash rule (v1):</strong> SHA-256 of JSON-LD using <em>sorted keys</em>, <em>minimal separators</em>, UTF-8, with <code>contentHash</code> set to <code>sha256:REPLACED_AT_RUNTIME</code>.</li>
+    <li><strong>Bundle truth:</strong> <code>/api/v1/bundle/{ID}.json</code> carries the sealed <code>contentHash</code> for verification.</li>
+    <li><strong>Manifest truth:</strong> <code>/api/v1/manifest.json</code> lists sealed hashes for all IDs.</li>
+  </ul>
+
+  <h2>Non-goals (v1 will not grow)</h2>
+  <ul>
+    <li>No new negotiation modes (RDF accept headers etc).</li>
+    <li>No schema/field renames.</li>
+    <li>No hash-rule revisions.</li>
+  </ul>
+
+  <p>Return: <a href="../">API wiki</a></p>
+</body>
+</html>
