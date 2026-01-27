@@ -1,0 +1,20 @@
+{
+  "registry": "registry.parasks",
+  "manifestType": "GENESIS",
+  "issuedAt": "2026-01-27T00:00:00Z",
+  "authority": "https://registry.parasks/id/E000001",
+  "event": "https://registry.parasks/id/X000001",
+  "ontology": "https://registry.parasks/ontology/v1",
+  "records": [
+    "https://registry.parasks/id/E000001",
+    "https://registry.parasks/id/A000001",
+    "https://registry.parasks/id/X000001"
+  ],
+  "rules": {
+    "identifierPolicy": "issued-only",
+    "immutability": true,
+    "deletion": "forbidden",
+    "reuse": "forbidden"
+  },
+  "status": "authoritative"
+}
