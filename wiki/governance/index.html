@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Governance — registry.parasks</title>
+</head>
+<body>
+  <h1>Governance</h1>
+
+  <p>
+    Governance defines who may issue identifiers, how records change, and how
+    stability is preserved. The registry is append-only: identity is permanent;
+    updates are recorded as new facts and new audit entries.
+  </p>
+
+  <h2>Roles</h2>
+  <ul>
+    <li><strong>Authority:</strong> <a href="../../id/E000001/">E000001</a></li>
+    <li><strong>Registrar:</strong> <a href="../../id/A000001/">A000001</a></li>
+    <li><strong>Operator:</strong> optional (infrastructure only, no semantic power)</li>
+    <li><strong>Reviewer:</strong> optional (quality gate, does not issue IDs)</li>
+  </ul>
+
+  <h2>Change control</h2>
+  <ul>
+    <li>Never delete or reuse identifiers.</li>
+    <li>Every issuance adds: <code>/data</code>, <code>/page</code>, <code>/id</code>, and an audit entry.</li>
+    <li>Edits to human pages are allowed, but must not change identifier meaning.</li>
+    <li>Schema/ontology changes are additive; v1 core remains locked.</li>
+  </ul>
+
+  <h2>Audit</h2>
+  <ul>
+    <li>Audit entries live in <code>/audit/logs/</code> as sequential JSON files.</li>
+    <li><code>audit/logs/index.json</code> points to the latest entry.</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
