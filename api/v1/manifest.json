@@ -1,7 +1,7 @@
 {
   "apiVersion": "v1",
   "base": "https://napier369.github.io/registry.parasks",
-  "generatedAt": "2026-01-27T12:53:29Z",
+  "generatedAt": "2026-01-27T12:54:07Z",
   "latestAudit": "/audit/logs/index.json",
   "records": {
     "A000001": {
