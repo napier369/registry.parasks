@@ -1,0 +1,13 @@
+{
+  "@context": "context.jsonld",
+  "@id": "https://registry.parasks/ontology/v1",
+  "@type": "owl:Ontology",
+  "rdfs:label": {
+    "en": "Registry.parasks Core Ontology v1"
+  },
+  "rdfs:comment": {
+    "en": "Minimal sovereign ontology defining the foundational classes and properties for registry.parasks. This ontology is frozen at v1."
+  },
+  "registry:version": "1.0",
+  "registry:status": "locked"
+}
