@@ -1,0 +1,8 @@
+{
+  "apiVersion": "v1",
+  "base": "https://napier369.github.io/registry.parasks",
+  "id": "X000002",
+  "resolver": "/id/X000002/",
+  "page": "/page/X000002/",
+  "data": "/data/X000002.jsonld"
+}
