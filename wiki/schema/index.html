@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Schema & ontology — registry.parasks</title>
+</head>
+<body>
+  <h1>Schema & ontology</h1>
+
+  <p>
+    This registry uses a minimal core ontology for consistent machine-readable records.
+    The ontology is published under <code>/ontology/v1/</code> and records are published
+    as JSON-LD under <code>/data/</code>.
+  </p>
+
+  <h2>Core classes</h2>
+  <ul>
+    <li><strong>Entity (E)</strong> — things that exist (authority, policy, etc.)</li>
+    <li><strong>Agent (A)</strong> — actors (registrar, operator)</li>
+    <li><strong>Document (D)</strong> — governed texts and instruments</li>
+    <li><strong>Event (X)</strong> — actions recorded in time (issue, genesis)</li>
+  </ul>
+
+  <h2>Core fields (minimum)</h2>
+  <ul>
+    <li><code>@context</code> — <a href="../../ontology/v1/context.jsonld">ontology/v1/context.jsonld</a></li>
+    <li><code>@id</code> — canonical identifier URL (<code>/id/&lt;ID&gt;</code>)</li>
+    <li><code>@type</code> — Entity/Agent/Document/Event</li>
+    <li><code>rdfs:label</code> — human name</li>
+    <li><code>registry:issuedAt</code> — issuance timestamp</li>
+    <li><code>registry:status</code> — active/deprecated/historical</li>
+  </ul>
+
+  <h2>Where truth lives</h2>
+  <ul>
+    <li><code>/id</code> — identity (permanent entrypoint)</li>
+    <li><code>/data</code> — machine truth (authoritative JSON-LD)</li>
+    <li><code>/page</code> — human view (readable rendering)</li>
+    <li><code>/audit</code> — append-only change record</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
