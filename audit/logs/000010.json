@@ -1,0 +1,8 @@
+{
+  "seq": "000010",
+  "time": "2026-01-27T12:57:47Z",
+  "gitCommit": "d3737d646c1bf52902e54f384f2fc63b89de068c",
+  "apiVersion": "v1",
+  "manifest": "/api/v1/manifest.json",
+  "manifestSha256": "sha256:2714dc7c9cffc8230f6d1351f80ea1f3e48592a4d05452afbab2b086e0a932c8"
+}
