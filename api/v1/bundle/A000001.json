@@ -1,0 +1,12 @@
+{
+  "apiVersion": "v1",
+  "base": "https://napier369.github.io/registry.parasks",
+  "generatedAt": "2026-01-27T12:22:07Z",
+  "id": "A000001",
+  "resolver": "/id/A000001/",
+  "page": "/page/A000001/",
+  "data": "/data/A000001.jsonld",
+  "contentHash": "sha256:f6b3a835f883e92c63416a8ea27233dc0a7346df2f707d6edb60d2d65b894aaf",
+  "latestAuditPointer": "/audit/logs/index.json",
+  "latestAudit": "/audit/logs/000007.json"
+}
