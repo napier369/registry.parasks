@@ -3,7 +3,13 @@
   "base": "https://napier369.github.io/registry.parasks",
   "latestAudit": "/audit/logs/index.json",
   "records": {
+    "A000001": "/data/A000001.jsonld",
+    "D000001": "/data/D000001.jsonld",
+    "E000001": "/data/E000001.jsonld",
+    "E000002": "/data/E000002.jsonld",
     "E000003": "/data/E000003.jsonld",
-    "E000004": "/data/E000004.jsonld"
+    "E000004": "/data/E000004.jsonld",
+    "X000001": "/data/X000001.jsonld",
+    "X000002": "/data/X000002.jsonld"
   }
 }
