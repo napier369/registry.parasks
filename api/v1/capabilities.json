@@ -1,0 +1,19 @@
+{
+  "apiVersion": "v1",
+  "base": "https://napier369.github.io/registry.parasks",
+  "endpoints": {
+    "apiIndex": "/api/v1/index.json",
+    "recordsList": "/api/v1/records.json",
+    "wikiIndex": "/api/v1/wiki.json",
+    "latestAudit": "/api/v1/latest-audit.json",
+    "auditIndex": "/audit/logs/index.json",
+    "resolveTemplate": "/api/v1/resolve/{ID}.json",
+    "dataTemplate": "/data/{ID}.jsonld",
+    "pageTemplate": "/page/{ID}/",
+    "idTemplate": "/id/{ID}/"
+  },
+  "notes": [
+    "All records are immutable identifiers; updates are new records or new audit entries.",
+    "GitHub Pages may serve cached responses briefly; use nocache query params during automation."
+  ]
+}
