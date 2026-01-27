@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>API v1 Console — registry.parasks</title>
+  <style>
+    body { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+           margin: 24px; line-height: 1.35; }
+    .row { display:flex; gap:12px; flex-wrap:wrap; align-items:center; }
+    input, button, select { font: inherit; padding: 8px 10px; }
+    button { cursor:pointer; }
+    .card { border:1px solid #ddd; border-radius:10px; padding:14px; margin-top:12px; }
+    .ok { color:#0a7a0a; font-weight:700; }
+    .bad { color:#b00020; font-weight:700; }
+    .muted { color:#666; }
+    pre { white-space:pre-wrap; word-break:break-word; margin:0; }
+    a { color: inherit; }
+    .small { font-size: 12px; }
+    hr { border:0; border-top:1px solid #eee; margin:14px 0; }
+  </style>
+</head>
+<body>
+  <h1>API v1 Console</h1>
+  <div class="muted">Live fetch + verify (bundle hash vs data hash) + audit pointer checks.</div>
+
+  <div class="card">
+    <div class="row">
+      <label>BASE</label>
+      <input id="base" size="48" />
+      <button id="btnBase">Use current origin</button>
+      <span class="small muted">(GitHub Pages cache-safe: adds ?nocache=...)</span>
+    </div>
+
+    <hr/>
+
+    <div class="row">
+      <label>ID</label>
+      <input id="rid" size="16" placeholder="E000004" />
+      <button id="btnLoad">Load + Verify</button>
+      <button id="btnLinks">Open Links</button>
+
+      <label class="muted">Quick pick</label>
+      <select id="pick"></select>
+    </div>
+
+    <div class="row small muted" style="margin-top:10px;">
+      <div>Index: <a id="lnIndex" target="_blank" rel="noopener">/api/v1/index.json</a></div>
+      <div>Capabilities: <a id="lnCaps" target="_blank" rel="noopener">/api/v1/capabilities.json</a></div>
+      <div>Manifest: <a id="lnManifest" target="_blank" rel="noopener">/api/v1/manifest.json</a></div>
+      <div>Audit Index: <a id="lnAuditIdx" target="_blank" rel="noopener">/audit/logs/index.json</a></div>
+      <div>Latest Audit: <a id="lnLatestAudit" target="_blank" rel="noopener">/api/v1/latest-audit.json</a></div>
+    </div>
+  </div>
+
+  <div id="status" class="card">
+    <div><b>Status</b></div>
+    <div id="msg" class="muted">Idle.</div>
+  </div>
+
+  <div id="verify" class="card">
+    <div><b>Verification</b></div>
+    <div id="verdict" class="muted">—</div>
+    <pre id="details" class="small muted"></pre>
+  </div>
+
+  <div class="card">
+    <div><b>Bundle</b> <span class="muted small" id="bundlePath"></span></div>
+    <pre id="bundleOut" class="small muted">—</pre>
+  </div>
+
+  <div class="card">
+    <div><b>Data</b> <span class="muted small" id="dataPath"></span></div>
+    <pre id="dataOut" class="small muted">—</pre>
+  </div>
+
+<script>
+(function(){
+  const $ = (id) => document.getElementById(id);
+  const nowNC = () => String(Date.now());
+
+  function setLinks(base){
+    const join = (p) => base.replace(/\/+$/,'') + p;
+    $("lnIndex").href = join("/api/v1/index.json");
+    $("lnCaps").href = join("/api/v1/capabilities.json");
+    $("lnManifest").href = join("/api/v1/manifest.json");
+    $("lnAuditIdx").href = join("/audit/logs/index.json");
+    $("lnLatestAudit").href = join("/api/v1/latest-audit.json");
+  }
+
+  async function fetchJson(base, path){
+    const url = base.replace(/\/+$/,'') + path + (path.includes("?") ? "&" : "?") + "nocache=" + nowNC();
+    const r = await fetch(url, { cache: "no-store" });
+    if (!r.ok) throw new Error(`HTTP ${r.status} for ${path}`);
+    return await r.json();
+  }
+
+  function stableJson(obj){
+    // Deterministic stringify: sort keys, minimal separators, UTF-8
+    const sorter = (x) => {
+      if (Array.isArray(x)) return x.map(sorter);
+      if (x && typeof x === "object") {
+        const o = {};
+        Object.keys(x).sort().forEach(k => o[k] = sorter(x[k]));
+        return o;
+      }
+      return x;
+    };
+    return JSON.stringify(sorter(obj));
+  }
+
+  async function sha256Hex(str){
+    const enc = new TextEncoder().encode(str);
+    const dig = await crypto.subtle.digest("SHA-256", enc);
+    const b = Array.from(new Uint8Array(dig));
+    return b.map(x => x.toString(16).padStart(2,"0")).join("");
+  }
+
+  function showMsg(text, cls){
+    $("msg").textContent = text;
+    $("msg").className = cls || "muted";
+  }
+
+  async function populatePicker(base){
+    $("pick").innerHTML = "";
+    const opt0 = document.createElement("option");
+    opt0.value = "";
+    opt0.textContent = "(choose)";
+    $("pick").appendChild(opt0);
+
+    try {
+      const idx = await fetchJson(base, "/api/v1/index.json");
+      const recs = idx.records || {};
+      Object.keys(recs).sort().forEach(id => {
+        const o = document.createElement("option");
+        o.value = id;
+        o.textContent = id;
+        $("pick").appendChild(o);
+      });
+    } catch(e){
+      // non-fatal
+    }
+  }
+
+  async function loadAndVerify(){
+    const base = $("base").value.trim();
+    const rid  = $("rid").value.trim();
+    if (!base || !rid) { showMsg("Set BASE and ID first.", "bad"); return; }
+
+    setLinks(base);
+    showMsg("Fetching bundle + data + audit pointers...", "muted");
+
+    $("bundleOut").textContent = "…";
+    $("dataOut").textContent = "…";
+    $("verdict").textContent = "…";
+    $("details").textContent = "";
+
+    // 1) pointers
+    const latestAudit = await fetchJson(base, "/api/v1/latest-audit.json");
+    const auditIdx    = await fetchJson(base, "/audit/logs/index.json");
+
+    const la = latestAudit.latest;
+    const ai = auditIdx.latest;
+
+    // 2) bundle + data
+    const bundlePath = `/api/v1/bundle/${rid}.json`;
+    const bundle = await fetchJson(base, bundlePath);
+
+    const dataPath = bundle.data;
+    const data = await fetchJson(base, dataPath);
+
+    $("bundlePath").textContent = bundlePath;
+    $("dataPath").textContent = dataPath;
+
+    $("bundleOut").textContent = JSON.stringify(bundle, null, 2);
+    $("dataOut").textContent = JSON.stringify(data, null, 2);
+
+    // v1 sealed rule: hash canonical sorted-min JSON of data (data contains placeholder contentHash)
+    const canon = stableJson(data);
+    const actual = await sha256Hex(canon);
+
+    const expectedFull = (bundle.contentHash || "").trim();
+    const expected = expectedFull.split("sha256:").pop().trim();
+
+    const okHash = (actual === expected);
+    const okPtr  = (la === ai);
+
+    const verdict =
+      (okHash && okPtr)
+        ? "OK: bundle hash matches data hash AND latest-audit pointer matches audit index."
+        : "FAIL: mismatch detected.";
+
+    $("verdict").textContent = verdict;
+    $("verdict").className = okHash && okPtr ? "ok" : "bad";
+
+    $("details").textContent =
+      `expected (bundle.contentHash): ${expectedFull}\n` +
+      `actual   (sha256(canon(data))): sha256:${actual}\n\n` +
+      `latest-audit.json.latest: ${la}\n` +
+      `audit/logs/index.json.latest: ${ai}\n`;
+
+    if (!okHash) showMsg("Hash mismatch: bundle vs data (content integrity FAIL).", "bad");
+    else if (!okPtr) showMsg("Pointer drift: latest-audit.json != audit index (freshness/consistency FAIL).", "bad");
+    else showMsg("All checks passed.", "ok");
+  }
+
+  function openLinks(){
+    const base = $("base").value.trim();
+    const rid  = $("rid").value.trim();
+    if (!base || !rid) return;
+
+    const join = (p) => base.replace(/\/+$/,'') + p;
+    const links = [
+      join(`/id/${rid}/`),
+      join(`/page/${rid}/`),
+      join(`/api/v1/bundle/${rid}.json`),
+      join(`/data/${rid}.jsonld`),
+    ];
+    links.forEach(u => window.open(u, "_blank", "noopener"));
+  }
+
+  // init
+  $("base").value = "https://napier369.github.io/registry.parasks";
+  setLinks($("base").value);
+  populatePicker($("base").value);
+
+  $("btnBase").addEventListener("click", () => {
+    $("base").value = window.location.origin; // if hosted on same site
+    setLinks($("base").value);
+    populatePicker($("base").value);
+  });
+
+  $("btnLoad").addEventListener("click", () => loadAndVerify().catch(e => showMsg(String(e), "bad")));
+  $("btnLinks").addEventListener("click", openLinks);
+
+  $("pick").addEventListener("change", () => {
+    if ($("pick").value) $("rid").value = $("pick").value;
+  });
+})();
+</script>
+</body>
+</html>
