@@ -1,5 +1,5 @@
 {
-  "latestSeq": 3,
-  "latest": "audit/logs/000003.json",
+  "latestSeq": 4,
+  "latest": "audit/logs/000004.json",
   "appendOnly": true
 }
