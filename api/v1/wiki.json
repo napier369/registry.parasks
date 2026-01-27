@@ -11,7 +11,8 @@
       "howItWorks": "/wiki/how-it-works/",
       "mainframe": "/wiki/mainframe/",
       "ibm": "/wiki/ibm/",
-      "ibmI": "/wiki/ibm-i/"
+      "ibmI": "/wiki/ibm-i/",
+      "apiV1": "/wiki/api/"
     }
   }
 }

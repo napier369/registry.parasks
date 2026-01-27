@@ -2,37 +2,39 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Public API — registry.parasks</title>
+  <title>API v1 — registry.parasks</title>
 </head>
 <body>
-  <h1>Public API</h1>
+  <h1>API v1</h1>
 
   <p>
-    The registry is published as static, read-only resources. There is no write API.
-    Publication occurs by issuing new records and audit entries.
+    API v1 is the stable machine interface for discovering records, resolving identifiers,
+    and verifying sealed content hashes. v1 is additive-only: do not break existing fields
+    or semantics.
   </p>
 
-  <h2>Endpoints</h2>
+  <h2>Entry points</h2>
   <ul>
-    <li><code>/id/&lt;ID&gt;/</code> — identifier entrypoint (resolves to a human page)</li>
-    <li><code>/page/&lt;ID&gt;/</code> — human-readable page</li>
-    <li><code>/data/&lt;ID&gt;.jsonld</code> — machine-readable JSON-LD record</li>
-    <li><code>/audit/logs/index.json</code> — pointer to latest audit entry</li>
-    <li><code>/audit/logs/00000N.json</code> — audit entries</li>
-    <li><code>/.well-known/registry-keys.json</code> — verification keys (present/future)</li>
+    <li><a href="../../api/v1/index.json">/api/v1/index.json</a> — main index (records + pointers)</li>
+    <li><a href="../../api/v1/capabilities.json">/api/v1/capabilities.json</a> — endpoint contract (templates)</li>
+    <li><a href="../../api/v1/records.json">/api/v1/records.json</a> — full record list</li>
+    <li><a href="../../api/v1/wiki.json">/api/v1/wiki.json</a> — wiki index (machine)</li>
+    <li><a href="../../api/v1/latest-audit.json">/api/v1/latest-audit.json</a> — latest audit pointer</li>
   </ul>
 
-  <h2>Usage</h2>
+  <h2>Per-record endpoints</h2>
   <ul>
-    <li>Humans: browse <code>/id</code> or <code>/page</code></li>
-    <li>Machines: fetch <code>/data</code> JSON-LD</li>
-    <li>Monitoring: poll <code>/audit/logs/index.json</code> for changes</li>
+    <li><code>/api/v1/resolve/{ID}.json</code> — resolver response (id/page/data paths)</li>
+    <li><code>/api/v1/bundle/{ID}.json</code> — one-shot bundle (resolver + page + data + sealed contentHash + latestAudit)</li>
+    <li><code>/data/{ID}.jsonld</code> — authoritative payload (contains placeholder contentHash to prevent self-hash loops)</li>
+    <li><code>/api/v1/manifest.json</code> — sealed hash map (truth source for verification)</li>
   </ul>
 
-  <h2>Status codes</h2>
+  <h2>Verification rule (v1)</h2>
   <ul>
-    <li>200 — resource exists</li>
-    <li>404 — resource not present</li>
+    <li><strong>Do not</strong> trust <code>/data/{ID}.jsonld</code> <code>contentHash</code> (placeholder by design).</li>
+    <li>Verify by hashing canonical JSON (sorted keys + minimal separators + UTF-8) with the placeholder rule.</li>
+    <li>Compare against <code>/api/v1/manifest.json</code> for the ID.</li>
   </ul>
 
   <p>Return: <a href="../">Wiki index</a></p>
