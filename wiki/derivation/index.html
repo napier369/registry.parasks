@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Derivation from external sources — registry.parasks</title>
+</head>
+<body>
+  <h1>Derivation from external sources</h1>
+
+  <p>
+    This page defines how <strong>registry.parasks</strong> derives structured
+    information from external public sources, including Wikipedia, in a lawful,
+    ethical, and auditable manner.
+  </p>
+
+  <h2>Principle</h2>
+  <p>
+    The registry does not republish copyrighted text. Instead, it derives facts,
+    metadata, structure, and signals, and records provenance for verification.
+  </p>
+
+  <h2>Permitted inputs</h2>
+  <ul>
+    <li>Public APIs (e.g. Wikipedia API, Wikidata)</li>
+    <li>Publicly licensed structured data</li>
+    <li>Official publications and standards</li>
+  </ul>
+
+  <h2>What is derived</h2>
+  <ul>
+    <li>Facts (dates, roles, relationships)</li>
+    <li>Structured signals (infobox fields, categories)</li>
+    <li>Taxonomy terms and tags</li>
+    <li>Identifiers and cross-references (e.g. Wikidata QIDs)</li>
+  </ul>
+
+  <h2>What is not copied</h2>
+  <ul>
+    <li>Wikipedia article prose</li>
+    <li>Paragraphs or narrative text</li>
+    <li>Editorial phrasing or commentary</li>
+  </ul>
+
+  <h2>Wikipedia-specific handling</h2>
+  <p>
+    Wikipedia content is licensed under CC-BY-SA 4.0. The registry complies by:
+  </p>
+  <ul>
+    <li>Using the Wikipedia API for access</li>
+    <li>Extracting facts and structure only</li>
+    <li>Recording page title, revision ID, and retrieval date</li>
+    <li>Providing attribution when Wikipedia-derived facts are used</li>
+  </ul>
+
+  <h2>Attribution</h2>
+  <p>
+    When Wikipedia is used as a factual source, pages include an attribution
+    statement such as:
+  </p>
+  <pre>
+This entry incorporates information derived from Wikipedia.
+Source: “Page title”, Wikipedia, retrieved YYYY-MM-DD.
+  </pre>
+
+  <h2>Provenance recording</h2>
+  <ul>
+    <li>Source name (e.g. Wikipedia)</li>
+    <li>Page title or identifier</li>
+    <li>Revision ID</li>
+    <li>Retrieval timestamp</li>
+  </ul>
+
+  <h2>Output</h2>
+  <ul>
+    <li>JSON-LD records under <code>/data</code></li>
+    <li>Human-readable summaries under <code>/wiki</code> or <code>/page</code></li>
+    <li>Audit entries recording issuance</li>
+  </ul>
+
+  <p>
+    This process ensures that all published records are lawful, verifiable,
+    and independent of any single upstream platform.
+  </p>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
