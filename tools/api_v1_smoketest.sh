@@ -1,6 +1,3 @@
-cd ~/registry.parasks
-
-cat > tools/api_v1_smoketest.sh <<'SH'
 #!/usr/bin/env bash
 set -euo pipefail
 
@@ -29,9 +26,3 @@ python3 tools/reg_verify_manifest.py
 
 echo
 echo "PASS: API v1 smoke test complete"
-SH
-
-chmod +x tools/api_v1_smoketest.sh
-
-# quick run now
-./tools/api_v1_smoketest.sh
