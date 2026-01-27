@@ -1,38 +1,38 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Audit & Provenance — registry.parasks</title>
-</head>
-<body>
-  <h1>Audit & Provenance</h1>
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8">
+<title>Audit & Verification — registry.parasks Wiki</title></head><body>
 
-  <p>
-    All changes in <strong>registry.parasks</strong> are append-only and recorded.
-    Identity is permanent; history is explicit.
-  </p>
+<h1>Audit & Verification</h1>
 
-  <h2>Audit log</h2>
-  <ul>
-    <li>Location: <code>/audit/logs/</code></li>
-    <li>Format: sequential JSON files (<code>000001.json</code>, <code>000002.json</code>, …)</li>
-    <li>Pointer: <code>audit/logs/index.json</code> indicates the latest entry</li>
-  </ul>
+<p>
+Every issuance and seal action is append-only and recorded in <code>/audit/logs/</code>.
+The current audit head is <code>/audit/logs/index.json</code>.
+</p>
 
-  <h2>What gets audited</h2>
-  <ul>
-    <li>Issuance of any new identifier</li>
-    <li>Recording of events</li>
-    <li>Formal status declarations (e.g., v1 freeze)</li>
-  </ul>
+<h2>What to fetch</h2>
+<ul>
+  <li>Audit head: <a href="../../audit/logs/index.json">/audit/logs/index.json</a></li>
+  <li>Latest audit entry: value of <code>latest</code> inside the audit head</li>
+  <li>Canonical machine record: <code>/data/&lt;ID&gt;.jsonld</code></li>
+</ul>
 
-  <h2>Provenance</h2>
-  <ul>
-    <li>Actors are identified (e.g., <a href="../../id/A000001/">Registrar</a>)</li>
-    <li>Events reference affected records</li>
-    <li>Timestamps are recorded at issuance</li>
-  </ul>
+<h2>Verification rule</h2>
+<ul>
+  <li>Each <code>/data/&lt;ID&gt;.jsonld</code> contains <code>contentHash</code>.</li>
+  <li>Verification passes when the SHA-256 of the canonical JSON (with <code>contentHash</code> blanked to <code>sha256:</code>) equals the stored hash.</li>
+</ul>
 
-  <p>Return: <a href="../">Wiki index</a></p>
-</body>
-</html>
+<h2>Live examples</h2>
+<ul>
+  <li>E000003: <a href="../../data/E000003.jsonld">data</a> | <a href="../../id/E000003/">id</a> | <a href="../../page/E000003/">page</a></li>
+  <li>E000004: <a href="../../data/E000004.jsonld">data</a> | <a href="../../id/E000004/">id</a> | <a href="../../page/E000004/">page</a></li>
+</ul>
+
+<h2>Tools</h2>
+<ul>
+  <li>Local validator: <code>python3 tools/issue_check.py &lt;ID&gt;</code></li>
+  <li>Latest audit reader: <code>python3 tools/reg_get_latest.py</code></li>
+</ul>
+
+<p>Return: <a href="../">Wiki index</a></p>
+
+</body></html>
