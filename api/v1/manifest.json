@@ -1,24 +1,24 @@
 {
   "apiVersion": "v1",
   "base": "https://napier369.github.io/registry.parasks",
-  "generatedAt": "2026-01-27T00:00:00Z",
+  "generatedAt": "2026-01-27T12:30:09Z",
   "latestAudit": "/audit/logs/index.json",
   "records": {
     "A000001": {
       "data": "/data/A000001.jsonld",
-      "contentHash": "sha256:f6b3a835f883e92c63416a8ea27233dc0a7346df2f707d6edb60d2d65b894aaf"
+      "contentHash": "sha256:f3a97b6604e0142b6389e5a2a8c96781fd933f0b31bd9c993f88b1bac8732df6"
     },
     "D000001": {
       "data": "/data/D000001.jsonld",
-      "contentHash": "sha256:0984bad97d8942ea7e088ce6584722341a370f2e896497e4cfc74924935b7f55"
+      "contentHash": "sha256:c25f0bee2601e99031fdd64d7cda628d2232e3b3236e79d1c57f08a900e90362"
     },
     "E000001": {
       "data": "/data/E000001.jsonld",
-      "contentHash": "sha256:b2e4bc5c6c1c6c08f633022803bc80c2f9e231d5d1b0e384d4fc7b2842639b05"
+      "contentHash": "sha256:e7d5942a3f65014aa5dca147c5ef55d26a78c35d9ba841bbb213977553664483"
     },
     "E000002": {
       "data": "/data/E000002.jsonld",
-      "contentHash": "sha256:60553d1867a5642548f766c183084dec78c656223125b74064c20e78d17cb4e2"
+      "contentHash": "sha256:b1cd9e11eced9df7481623f68a23b38f4a1b449291ceb67eb31be4b653944b2d"
     },
     "E000003": {
       "data": "/data/E000003.jsonld",
@@ -30,11 +30,11 @@
     },
     "X000001": {
       "data": "/data/X000001.jsonld",
-      "contentHash": "sha256:2b268a8909ecfabcf6393bea69fe6db5e2d5cf1d56f3379c7358e18d78936129"
+      "contentHash": "sha256:281365e538ed0afb66cff111a9372bd7eed80c5c46a08b37168a00a88ec3e847"
     },
     "X000002": {
       "data": "/data/X000002.jsonld",
-      "contentHash": "sha256:8e96a79577feb9dab1de2831d18b2c8c7e58b3a4545df02bf5ba882102ee06ca"
+      "contentHash": "sha256:a22f75429155849830c513de9addd7a1c7791460c427490397f18a677764cbb5"
     }
   }
 }

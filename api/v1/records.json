@@ -2,13 +2,53 @@
   "apiVersion": "v1",
   "base": "https://napier369.github.io/registry.parasks",
   "records": [
-    { "id": "A000001", "data": "/data/A000001.jsonld", "page": "/page/A000001/", "resolver": "/id/A000001/" },
-    { "id": "D000001", "data": "/data/D000001.jsonld", "page": "/page/D000001/", "resolver": "/id/D000001/" },
-    { "id": "E000001", "data": "/data/E000001.jsonld", "page": "/page/E000001/", "resolver": "/id/E000001/" },
-    { "id": "E000002", "data": "/data/E000002.jsonld", "page": "/page/E000002/", "resolver": "/id/E000002/" },
-    { "id": "E000003", "data": "/data/E000003.jsonld", "page": "/page/E000003/", "resolver": "/id/E000003/" },
-    { "id": "E000004", "data": "/data/E000004.jsonld", "page": "/page/E000004/", "resolver": "/id/E000004/" },
-    { "id": "X000001", "data": "/data/X000001.jsonld", "page": "/page/X000001/", "resolver": "/id/X000001/" },
-    { "id": "X000002", "data": "/data/X000002.jsonld", "page": "/page/X000002/", "resolver": "/id/X000002/" }
+    {
+      "id": "A000001",
+      "data": "/data/A000001.jsonld",
+      "page": "/page/A000001/",
+      "resolver": "/id/A000001/"
+    },
+    {
+      "id": "D000001",
+      "data": "/data/D000001.jsonld",
+      "page": "/page/D000001/",
+      "resolver": "/id/D000001/"
+    },
+    {
+      "id": "E000001",
+      "data": "/data/E000001.jsonld",
+      "page": "/page/E000001/",
+      "resolver": "/id/E000001/"
+    },
+    {
+      "id": "E000002",
+      "data": "/data/E000002.jsonld",
+      "page": "/page/E000002/",
+      "resolver": "/id/E000002/"
+    },
+    {
+      "id": "E000003",
+      "data": "/data/E000003.jsonld",
+      "page": "/page/E000003/",
+      "resolver": "/id/E000003/"
+    },
+    {
+      "id": "E000004",
+      "data": "/data/E000004.jsonld",
+      "page": "/page/E000004/",
+      "resolver": "/id/E000004/"
+    },
+    {
+      "id": "X000001",
+      "data": "/data/X000001.jsonld",
+      "page": "/page/X000001/",
+      "resolver": "/id/X000001/"
+    },
+    {
+      "id": "X000002",
+      "data": "/data/X000002.jsonld",
+      "page": "/page/X000002/",
+      "resolver": "/id/X000002/"
+    }
   ]
 }
