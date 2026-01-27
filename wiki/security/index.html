@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Security & trust — registry.parasks</title>
+</head>
+<body>
+  <h1>Security & trust</h1>
+
+  <p>
+    This registry separates identity from representation and records history in an
+    append-only audit log. Trust is established by published authority records and,
+    optionally, by cryptographic signing of manifests and snapshots.
+  </p>
+
+  <h2>Current trust anchors</h2>
+  <ul>
+    <li>Authority: <a href="../../id/E000001/">E000001</a></li>
+    <li>Registrar: <a href="../../id/A000001/">A000001</a></li>
+    <li>Audit log: <a href="../../audit/logs/index.json">audit/logs/index.json</a></li>
+    <li>Key endpoint: <a href="../../.well-known/registry-keys.json">.well-known/registry-keys.json</a></li>
+  </ul>
+
+  <h2>Integrity model</h2>
+  <ul>
+    <li>Identifiers are permanent and never reused.</li>
+    <li>Records are published as JSON-LD under <code>/data</code>.</li>
+    <li>Every issuance is recorded in <code>/audit/logs</code>.</li>
+  </ul>
+
+  <h2>Signing (optional)</h2>
+  <ul>
+    <li>Publish verification keys under <code>/.well-known/registry-keys.json</code>.</li>
+    <li>Sign snapshot manifests (future hardening).</li>
+    <li>Keep old keys so historical manifests remain verifiable.</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
