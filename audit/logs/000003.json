@@ -1,0 +1,8 @@
+{
+  "seq": 3,
+  "ts": "2026-01-27T00:00:00Z",
+  "actor": "https://registry.parasks/id/A000001",
+  "event": "ISSUE_EVENT",
+  "adds": ["https://registry.parasks/id/X000002"],
+  "notes": "Recorded issuance event for D000001."
+}
