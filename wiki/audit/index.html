@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Audit & Provenance — registry.parasks</title>
+</head>
+<body>
+  <h1>Audit & Provenance</h1>
+
+  <p>
+    All changes in <strong>registry.parasks</strong> are append-only and recorded.
+    Identity is permanent; history is explicit.
+  </p>
+
+  <h2>Audit log</h2>
+  <ul>
+    <li>Location: <code>/audit/logs/</code></li>
+    <li>Format: sequential JSON files (<code>000001.json</code>, <code>000002.json</code>, …)</li>
+    <li>Pointer: <code>audit/logs/index.json</code> indicates the latest entry</li>
+  </ul>
+
+  <h2>What gets audited</h2>
+  <ul>
+    <li>Issuance of any new identifier</li>
+    <li>Recording of events</li>
+    <li>Formal status declarations (e.g., v1 freeze)</li>
+  </ul>
+
+  <h2>Provenance</h2>
+  <ul>
+    <li>Actors are identified (e.g., <a href="../../id/A000001/">Registrar</a>)</li>
+    <li>Events reference affected records</li>
+    <li>Timestamps are recorded at issuance</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
