@@ -1,0 +1,13 @@
+{
+  "seq": 4,
+  "ts": "2026-01-27T00:00:00Z",
+  "actor": "https://registry.parasks/id/A000001",
+  "event": "DERIVE_WIKIPEDIA_ENTITY",
+  "adds": ["https://registry.parasks/id/E000003"],
+  "source": {
+    "name": "Wikipedia",
+    "page": "Albert Einstein",
+    "raw": "sources/raw/wikipedia/albert-einstein/query.json"
+  },
+  "notes": "Derived structured record and tags; no prose copied."
+}
