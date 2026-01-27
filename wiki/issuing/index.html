@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Issuing identifiers — registry.parasks</title>
+</head>
+<body>
+  <h1>Issuing identifiers</h1>
+
+  <h2>Rule</h2>
+  <p>Issue IDs; do not derive them from attributes.</p>
+
+  <h2>For a new Entity</h2>
+  <ol>
+    <li>Create <code>data/E00000N.jsonld</code></li>
+    <li>Create <code>page/E00000N/index.html</code></li>
+    <li>Create <code>id/E00000N/index.html</code> (resolver)</li>
+    <li>Append an audit entry: <code>audit/logs/00000N.json</code></li>
+  </ol>
+
+  <h2>Minimum JSON-LD fields</h2>
+  <ul>
+    <li><code>@context</code> (ontology context)</li>
+    <li><code>@id</code> (the canonical ID)</li>
+    <li><code>@type</code> (Entity/Document/Event/Agent)</li>
+    <li><code>rdfs:label</code> (human name)</li>
+    <li><code>registry:issuedAt</code> (timestamp)</li>
+    <li><code>registry:status</code> (active/deprecated/historical)</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
