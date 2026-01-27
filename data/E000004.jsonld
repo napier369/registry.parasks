@@ -18,5 +18,5 @@
     }
   },
   "dcterms:conformsTo": { "@id": "https://registry.parasks/ontology/v1" },
-  "contentHash": "sha256:TO_BE_GENERATED_BY_PIPELINE"
+  "contentHash": "sha256:fd6c85b7dd6d12161249693dcf8bcce1b471326a06421704311641a2fece98b8"
 }
