@@ -1,0 +1,455 @@
+{
+  "batchcomplete": true,
+  "query": {
+    "pages": [
+      {
+        "pageid": 736,
+        "ns": 0,
+        "title": "Albert Einstein",
+        "contentmodel": "wikitext",
+        "pagelanguage": "en",
+        "pagelanguagehtmlcode": "en",
+        "pagelanguagedir": "ltr",
+        "touched": "2026-01-26T23:21:32Z",
+        "lastrevid": 1334558045,
+        "length": 234419,
+        "fullurl": "https://en.wikipedia.org/wiki/Albert_Einstein",
+        "editurl": "https://en.wikipedia.org/w/index.php?title=Albert_Einstein&action=edit",
+        "canonicalurl": "https://en.wikipedia.org/wiki/Albert_Einstein",
+        "categories": [
+          {
+            "ns": 14,
+            "title": "Category:1879 births"
+          },
+          {
+            "ns": 14,
+            "title": "Category:1955 deaths"
+          },
+          {
+            "ns": 14,
+            "title": "Category:19th-century German Jews"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century American engineers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century American inventors"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century American letter writers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century American male writers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century American physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century American science writers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century German physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:20th-century Swiss inventors"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Academic staff of Charles University"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Academic staff of ETH Zurich"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Academic staff of the University of Bern"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Academic staff of the University of Zurich"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Activists for African-American civil rights"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Albert Einstein"
+          },
+          {
+            "ns": 14,
+            "title": "Category:All Wikipedia articles written in American English"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American Ashkenazi Jews"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American Nobel laureates"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American agnostics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American civil rights activists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American democratic socialists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American humanists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American male non-fiction writers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American pacifists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American philosophers of mathematics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American quantum physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American relativity theorists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American socialists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:American theoretical physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Anti-nationalists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles containing German-language text"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles with Internet Archive links"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles with LibriVox links"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles with Project Gutenberg links"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles with hAudio microformats"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles with hCards"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Articles with short description"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Biography with signature"
+          },
+          {
+            "ns": 14,
+            "title": "Category:CS1: long volume value"
+          },
+          {
+            "ns": 14,
+            "title": "Category:CS1 French-language sources (fr)"
+          },
+          {
+            "ns": 14,
+            "title": "Category:CS1 German-language sources (de)"
+          },
+          {
+            "ns": 14,
+            "title": "Category:CS1 location test"
+          },
+          {
+            "ns": 14,
+            "title": "Category:CS1 maint: work parameter with ISBN"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Deaths from abdominal aortic aneurysm"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Denaturalized citizens of Germany"
+          },
+          {
+            "ns": 14,
+            "title": "Category:ETH Zurich alumni"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Einstein family"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Emigrants from Nazi Germany to the United States"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Emigrants from Württemberg to the United States"
+          },
+          {
+            "ns": 14,
+            "title": "Category:European democratic socialists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German Ashkenazi Jews"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German Nobel laureates"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German agnostics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German emigrants to Switzerland"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German humanists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German male non-fiction writers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German quantum physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German relativity theorists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:German theoretical physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Good articles"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Institute for Advanced Study faculty"
+          },
+          {
+            "ns": 14,
+            "title": "Category:International members of the American Philosophical Society"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish American non-fiction writers"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish American physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish American socialists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish German physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish Nobel laureates"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish agnostics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Jewish emigrants from Nazi Germany to the United States"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Max Planck Institute directors"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Members of the Royal Netherlands Academy of Arts and Sciences"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Members of the United States National Academy of Sciences"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Naturalised citizens of Austria"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Naturalised citizens of Switzerland"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Naturalized citizens of the United States"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Nobel laureates in Physics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Nobelprize template using Wikidata property P8024"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Pages including recorded pronunciations"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Pages using Sister project links with hidden wikidata"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Pages using the Phonos extension"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Pages with German IPA"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Pantheists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Patent examiners"
+          },
+          {
+            "ns": 14,
+            "title": "Category:People from Ulm"
+          },
+          {
+            "ns": 14,
+            "title": "Category:People who lost German citizenship"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Philosophers of mathematics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Philosophers of science"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Recipients of Franklin Medal"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Scientists from Munich"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Short description matches Wikidata"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Stateless people"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Swiss Ashkenazi Jews"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Swiss Nobel laureates"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Swiss agnostics"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Swiss cosmologists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Swiss emigrants to the United States"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Swiss physicists"
+          },
+          {
+            "ns": 14,
+            "title": "Category:University of Zurich alumni"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Use American English from August 2024"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Use dmy dates from June 2025"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Wikipedia articles incorporating a citation from the 1922 Encyclopaedia Britannica with Wikisource reference"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Wikipedia indefinitely move-protected pages"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Wikipedia indefinitely semi-protected pages"
+          },
+          {
+            "ns": 14,
+            "title": "Category:Winners of the Max Planck Medal"
+          }
+        ],
+        "pageprops": {
+          "defaultsort": "Einstein, Albert",
+          "page_image_free": "Albert_Einstein_Head_cleaned.jpg",
+          "wikibase-badge-Q17437798": "",
+          "wikibase-shortdesc": "German-born theoretical physicist (1879–1955)",
+          "wikibase_item": "Q937"
+        }
+      }
+    ]
+  }
+}
