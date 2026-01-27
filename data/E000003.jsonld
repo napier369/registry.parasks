@@ -1,17 +1,28 @@
 {
   "@context": "https://registry.parasks/ontology/v1/context.jsonld",
   "@id": "https://registry.parasks/id/E000003",
-  "@type": ["Entity", "Identifier"],
-
-  "prefLabel": { "en": "Albert Einstein" },
+  "@type": [
+    "Entity",
+    "Identifier"
+  ],
+  "prefLabel": {
+    "en": "Albert Einstein"
+  },
   "notation": "E000003",
-
-  "issuedBy": { "@id": "https://registry.parasks/id/A000001" },
+  "issuedBy": {
+    "@id": "https://registry.parasks/id/A000001"
+  },
   "issuedAt": "2026-01-27T00:00:00Z",
-  "recordState": { "@id": "https://registry.parasks/def/recordState#Published" },
-
-  "tags": ["albert", "einstein", "physics", "relativity", "scientist"],
-
+  "recordState": {
+    "@id": "https://registry.parasks/def/recordState#Published"
+  },
+  "tags": [
+    "albert",
+    "einstein",
+    "physics",
+    "relativity",
+    "scientist"
+  ],
   "source": {
     "wikipedia": {
       "name": "Wikipedia",
@@ -23,10 +34,8 @@
       }
     }
   },
-
   "dcterms:conformsTo": {
     "@id": "https://registry.parasks/ontology/v1"
   },
-
-  "contentHash": "sha256:83f6973e26af83d47be95613820b8b66624ebbe4b05807bacd84266f06fea23a"
+  "contentHash": "sha256:b958390488b9835e83b96375c22ec0679e8fa20bfa5f6b29ba38afd24d377fe4"
 }
