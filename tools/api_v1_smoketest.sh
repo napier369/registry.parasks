@@ -39,4 +39,7 @@ fi
 
 echo "OK: latest-audit pointer matches audit index"
 echo ""
+
+bash tools/api_v1_doctor.sh || true
+
 echo "PASS: API v1 smoke test complete"
