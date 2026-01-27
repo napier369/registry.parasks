@@ -1,0 +1,17 @@
+{
+  "apiVersion": "v1",
+  "base": "https://napier369.github.io/registry.parasks",
+  "wiki": {
+    "index": "/wiki/",
+    "topics": "/wiki/topics/",
+    "pages": {
+      "sourcesPolicy": "/wiki/sources-policy/",
+      "identifiers": "/wiki/identifiers/",
+      "audit": "/wiki/audit/",
+      "howItWorks": "/wiki/how-it-works/",
+      "mainframe": "/wiki/mainframe/",
+      "ibm": "/wiki/ibm/",
+      "ibmI": "/wiki/ibm-i/"
+    }
+  }
+}
