@@ -11,6 +11,7 @@
     "dataTemplate": "/data/{ID}.jsonld",
     "pageTemplate": "/page/{ID}/",
     "idTemplate": "/id/{ID}/"
+    "bundleTemplate": "/api/v1/bundle/{ID}.json",
   },
   "notes": [
     "All records are immutable identifiers; updates are new records or new audit entries.",
