@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Monitoring — registry.parasks</title>
+</head>
+<body>
+  <h1>Monitoring</h1>
+
+  <p>
+    Monitoring is based on the append-only audit log. Watch the latest pointer,
+    then fetch the referenced audit entry.
+  </p>
+
+  <h2>Step-by-step</h2>
+  <ol>
+    <li>Fetch: <a href="../../audit/logs/index.json">/audit/logs/index.json</a></li>
+    <li>Read <code>latestSeq</code> and <code>latest</code></li>
+    <li>Fetch the <code>latest</code> file (e.g. <code>audit/logs/000003.json</code>)</li>
+    <li>Process the <code>adds</code> list to discover new IDs</li>
+    <li>For each new ID, fetch <code>/data/&lt;ID&gt;.jsonld</code></li>
+  </ol>
+
+  <h2>Notes</h2>
+  <ul>
+    <li>Audit is append-only; old entries are never edited.</li>
+    <li>If the pointer moves forward, something new was published.</li>
+    <li>Project hosting is static; availability depends on the hosting platform.</li>
+  </ul>
+
+  <p>Return: <a href="../">Wiki index</a></p>
+</body>
+</html>
