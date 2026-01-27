@@ -4,13 +4,37 @@
   "generatedAt": "2026-01-27T00:00:00Z",
   "latestAudit": "/audit/logs/index.json",
   "records": {
+    "A000001": {
+      "data": "/data/A000001.jsonld",
+      "contentHash": "sha256:f6b3a835f883e92c63416a8ea27233dc0a7346df2f707d6edb60d2d65b894aaf"
+    },
+    "D000001": {
+      "data": "/data/D000001.jsonld",
+      "contentHash": "sha256:0984bad97d8942ea7e088ce6584722341a370f2e896497e4cfc74924935b7f55"
+    },
+    "E000001": {
+      "data": "/data/E000001.jsonld",
+      "contentHash": "sha256:b2e4bc5c6c1c6c08f633022803bc80c2f9e231d5d1b0e384d4fc7b2842639b05"
+    },
+    "E000002": {
+      "data": "/data/E000002.jsonld",
+      "contentHash": "sha256:60553d1867a5642548f766c183084dec78c656223125b74064c20e78d17cb4e2"
+    },
     "E000003": {
       "data": "/data/E000003.jsonld",
-      "contentHash": "sha256:83f6973e26af83d47be95613820b8b66624ebbe4b05807bacd84266f06fea23a"
+      "contentHash": "sha256:b958390488b9835e83b96375c22ec0679e8fa20bfa5f6b29ba38afd24d377fe4"
     },
     "E000004": {
       "data": "/data/E000004.jsonld",
-      "contentHash": "sha256:599da514465ba45ec8c82afeb173b712384e1fef7c3e72bf9dde021da79cb481"
+      "contentHash": "sha256:2f9a0ba0c15210c98e61b0295db3004bcd0542868cd990029dc7ad840fc5cc5f"
+    },
+    "X000001": {
+      "data": "/data/X000001.jsonld",
+      "contentHash": "sha256:2b268a8909ecfabcf6393bea69fe6db5e2d5cf1d56f3379c7358e18d78936129"
+    },
+    "X000002": {
+      "data": "/data/X000002.jsonld",
+      "contentHash": "sha256:8e96a79577feb9dab1de2831d18b2c8c7e58b3a4545df02bf5ba882102ee06ca"
     }
   }
 }
