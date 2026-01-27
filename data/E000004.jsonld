@@ -1,0 +1,22 @@
+{
+  "@context": "https://registry.parasks/ontology/v1/context.jsonld",
+  "@id": "https://registry.parasks/id/E000004",
+  "@type": ["Entity", "Identifier"],
+  "prefLabel": { "en": "International Business Machines Corporation" },
+  "notation": "E000004",
+  "issuedBy": { "@id": "https://registry.parasks/id/A000001" },
+  "issuedAt": "2026-01-27T00:00:00Z",
+  "recordState": { "@id": "https://registry.parasks/def/recordState#Published" },
+  "tags": ["ibm", "international", "business", "machines", "corporation", "technology"],
+  "source": {
+    "wikipedia": {
+      "name": "Wikipedia",
+      "pageTitle": "IBM",
+      "pageUrl": "https://en.wikipedia.org/wiki/IBM",
+      "retrievedAt": "2026-01-27T00:00:00Z",
+      "raw": { "@id": "https://napier369.github.io/registry.parasks/sources/raw/wikipedia/ibm/query.json" }
+    }
+  },
+  "dcterms:conformsTo": { "@id": "https://registry.parasks/ontology/v1" },
+  "contentHash": "sha256:TO_BE_GENERATED_BY_PIPELINE"
+}
