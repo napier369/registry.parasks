@@ -1,0 +1,8 @@
+{
+  "seq": 6,
+  "ts": "2026-01-27T00:00:00Z",
+  "actor": { "@id": "https://registry.parasks/id/A000001" },
+  "event": "ISSUE_ENTITY",
+  "targets": ["https://registry.parasks/id/E000004"],
+  "notes": "Issued E000004 (IBM) as v1-compliant Entity+Identifier with Wikipedia-derived provenance."
+}
