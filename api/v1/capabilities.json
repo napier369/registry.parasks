@@ -6,12 +6,14 @@
     "recordsList": "/api/v1/records.json",
     "wikiIndex": "/api/v1/wiki.json",
     "latestAudit": "/api/v1/latest-audit.json",
+    "manifest": "/api/v1/manifest.json",
     "auditIndex": "/audit/logs/index.json",
+
     "resolveTemplate": "/api/v1/resolve/{ID}.json",
+    "bundleTemplate": "/api/v1/bundle/{ID}.json",
     "dataTemplate": "/data/{ID}.jsonld",
     "pageTemplate": "/page/{ID}/",
     "idTemplate": "/id/{ID}/"
-    "bundleTemplate": "/api/v1/bundle/{ID}.json",
   },
   "notes": [
     "All records are immutable identifiers; updates are new records or new audit entries.",
