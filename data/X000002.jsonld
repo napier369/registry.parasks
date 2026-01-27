@@ -2,11 +2,20 @@
   "@context": "https://registry.parasks/ontology/v1/context.jsonld",
   "@id": "https://registry.parasks/id/X000002",
   "@type": "Event",
-  "rdfs:label": { "en": "Issue Operating Charter (D000001)" },
-  "rdfs:comment": { "en": "Event recording the issuance of the registry.parasks Operating Charter." },
-  "prov:wasAssociatedWith": { "@id": "https://registry.parasks/id/A000001" },
-  "registry:relatesTo": { "@id": "https://registry.parasks/id/D000001" },
+  "rdfs:label": {
+    "en": "Issue Operating Charter (D000001)"
+  },
+  "rdfs:comment": {
+    "en": "Event recording the issuance of the registry.parasks Operating Charter."
+  },
+  "prov:wasAssociatedWith": {
+    "@id": "https://registry.parasks/id/A000001"
+  },
+  "registry:relatesTo": {
+    "@id": "https://registry.parasks/id/D000001"
+  },
   "registry:eventType": "Issue",
   "registry:issuedAt": "2026-01-27T00:00:00Z",
-  "registry:status": "active"
+  "registry:status": "active",
+  "contentHash": "sha256:REPLACED_AT_RUNTIME"
 }

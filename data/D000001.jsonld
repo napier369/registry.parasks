@@ -2,8 +2,13 @@
   "@context": "https://registry.parasks/ontology/v1/context.jsonld",
   "@id": "https://registry.parasks/id/D000001",
   "@type": "Document",
-  "rdfs:label": { "en": "registry.parasks Operating Charter (v1)" },
-  "rdfs:comment": { "en": "Authoritative operating charter for the registry." },
+  "rdfs:label": {
+    "en": "registry.parasks Operating Charter (v1)"
+  },
+  "rdfs:comment": {
+    "en": "Authoritative operating charter for the registry."
+  },
   "registry:issuedAt": "2026-01-27T00:00:00Z",
-  "registry:status": "active"
+  "registry:status": "active",
+  "contentHash": "sha256:REPLACED_AT_RUNTIME"
 }

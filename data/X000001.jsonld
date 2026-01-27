@@ -9,5 +9,6 @@
   "prov:wasAssociatedWith": {
     "@id": "https://registry.parasks/id/A000001"
   },
-  "registry:issuedAt": "2026-01-27T00:00:00Z"
+  "registry:issuedAt": "2026-01-27T00:00:00Z",
+  "contentHash": "sha256:REPLACED_AT_RUNTIME"
 }

@@ -10,5 +10,6 @@
     "en": "The sovereign issuing authority for the registry.parasks identifier namespace."
   },
   "registry:issuedAt": "2026-01-27T00:00:00Z",
-  "registry:status": "active"
+  "registry:status": "active",
+  "contentHash": "sha256:REPLACED_AT_RUNTIME"
 }
