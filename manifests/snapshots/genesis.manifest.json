@@ -6,10 +6,11 @@
   "event": "https://registry.parasks/id/X000001",
   "ontology": "https://registry.parasks/ontology/v1",
   "records": [
-    "https://registry.parasks/id/E000001",
-    "https://registry.parasks/id/A000001",
-    "https://registry.parasks/id/X000001"
-  ],
+  "https://registry.parasks/id/E000001",
+  "https://registry.parasks/id/A000001",
+  "https://registry.parasks/id/X000001",
+  "https://registry.parasks/id/E000002"
+]
   "rules": {
     "identifierPolicy": "issued-only",
     "immutability": true,
