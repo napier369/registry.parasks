@@ -1,53 +1,54 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <title>registry.parasks — Wiki</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>registry.parasks — wiki</title>
+  <style>
+    /* invisible unlock overlay (no player UI) */
+    #unlock {
+      position: fixed; inset: 0;
+      background: transparent;
+      cursor: pointer;
+    }
+  </style>
 </head>
 <body>
-  <h1>registry.parasks Wiki</h1>
-  <p>Narrative documentation. Canonical identifiers live under <code>/id</code>.</p>
 
-<h2>Start here</h2>
-<ul>
-  <li><a href="./status-v1/">Registry status (v1)</a></li>
-  <li><a href="./ibm/">IBM</a> (links to <a href="../id/E000004/">E000004</a>)</li>
-  <li><a href="./authority/">Authority model</a></li>
-  <li><a href="./governance/">Governance</a></li>
-  <li><a href="./about/">About this registry</a></li>
-  <li><a href="./derivation/">Derivation from external sources</a></li>
-  <li><a href="./derived/albert-einstein/">Derived: Albert Einstein</a></li>
-  <li><a href="../id/E000004/">IBM (E000004)</a></li>
-  <li><a href="./ibm-i/">IBM i</a> (references <a href="../id/E000004/">E000004</a>)</li>
-  <li><a href="./how-it-works/">How it works</a></li>
-  <li><a href="./sources-policy/">Sources policy</a></li>
-  <li><a href="./issuing/">Issuing identifiers</a></li>
-  <li><a href="./audit/">Audit & Provenance</a></li>
-  <li><a href="./audit/">Audit & Verification</a></li>
-  <li><a href="./identifiers/">Identifiers</a></li>
-  <li><a href="./topics/">Topics</a></li>
-  <li><a href="./parasks/">Parasks (disambiguation)</a></li>
-  <li><a href="./citation/">Public use & citation</a></li>
-  <li><a href="./schema/">Schema & ontology</a></li>
-  <li><a href="./changelog/">Change log</a></li>
-  <li><a href="./faq/">FAQ</a></li>
-  <li><a href="./examples/">Examples</a></li>
-  <li><a href="./security/">Security & trust</a></li>
-  <li><a href="./api/">Public API</a></li>
-  <li><a href="./monitoring/">Monitoring</a></li>
-  <li><a href="./contributing/">Contributing</a></li>
-  <li><a href="./sourcing/">Sourcing & verifiability</a></li>
-  <li><a href="./sourcing/">Sourcing & verifiability</a></li>
-</ul>
+  <!-- Hidden audio: loop, no controls -->
+  <audio id="bg" preload="auto" loop>
+    <source src="/registry.parasks/media/audio/fib_phi_uplifting_trance_v5.wav" type="audio/wav">
+  </audio>
 
-  <h2>Core records</h2>
-  <ul>
-    <li><a href="../id/E000001/">Authority (E000001)</a></li>
-    <li><a href="../id/A000001/">Registrar (A000001)</a></li>
-    <li><a href="../id/X000001/">Genesis Event (X000001)</a></li>
-    <li><a href="../id/E000002/">Operational Policy (E000002)</a></li>
-    <li><a href="../id/D000001/">Operating Charter (D000001)</a></li>
-    <li><a href="../id/X000002/">Issue Charter Event (X000002)</a></li>
-  </ul>
+  <!-- First-user-gesture unlock (required by browsers for sound autoplay) -->
+  <div id="unlock" aria-hidden="true"></div>
+
+  <script>
+    const a = document.getElementById('bg');
+    const u = document.getElementById('unlock');
+
+    async function startAudio() {
+      try {
+        await a.play();
+        u.remove();
+        window.removeEventListener('pointerdown', startAudio, true);
+        window.removeEventListener('keydown', startAudio, true);
+      } catch (e) {
+        // if blocked, keep overlay so the next gesture retries
+      }
+    }
+
+    // Try immediately (will often be blocked until gesture)
+    startAudio();
+
+    // Unlock on first interaction (no visible UI)
+    window.addEventListener('pointerdown', startAudio, true);
+    window.addEventListener('keydown', startAudio, true);
+  </script>
+
+  <!-- your existing wiki content below (keep or replace as you like) -->
+  <h1>registry.parasks — wiki</h1>
+  <p>Documentation and operational notes.</p>
+
 </body>
 </html>
